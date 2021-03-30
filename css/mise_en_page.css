@@ -1,0 +1,107 @@
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin-left: 9rem;
+}
+
+header {
+    display: flex;
+    padding: 1em;
+}
+
+nav {
+    margin: auto;
+}
+
+main > img {
+    position: relative;
+    left: 40vw;
+}
+
+main, #le-projet, #equipe, footer {
+    padding: 3em;
+}
+
+.bouton-descendre {
+    grid-area: bouton;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "contenu image" "bouton bouton";
+}
+
+.section-1 {
+    grid-area: contenu;
+    margin: auto;
+    padding-left: 5em;
+    z-index: 2;
+}
+
+.section-2 {
+    grid-area: image;
+    z-index: 2;
+}
+
+.section-projet {
+    display: flex;
+}
+
+.section-projet > img {
+    width: 60%;
+}
+
+.section-projet > p {
+    margin: auto;
+}
+
+/* Section équipe */
+
+.equipe-grille {
+    display: flex;
+}
+
+.equipe-grille > .membre-equipe {
+    margin: 3em;
+    width: 33.333%;
+}
+
+/* Formulaire */
+
+.section-2 > form > div {
+    margin: 1.2em;
+}
+
+.section-2 > form > .button {
+    text-align: center;
+}
+
+#first-name, #mail, #msg, #name {
+    width: 100%;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+}
+
+/* Ellipses de fond */
+
+.ellipse {
+    position: absolute;
+    z-index: 1;
+    left: 55%;
+    top: 25%;
+}
+
+.ellipse > svg {
+    width: 45em;
+}

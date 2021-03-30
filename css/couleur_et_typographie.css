@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    font-size: 62.5%; /* 1rem == 10px */
+}
+
+a {
+    text-decoration: none;
+    color: #6B4A9E;
+}
+
+a:hover {
+    color: #7964F2;
+}
+
+header {
+    background-color: #F1E6FF;
+    font-family: 'Ubuntu', sans-serif;
+    color: #6B4A9E;
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: 'Barlow', sans-serif;
+}
+
+h1 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 4rem;
+    font-weight: 100;
+    text-align: left;
+    color: #BA95E7;
+}
+
+h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #6B4A9E;
+    margin: 1em;
+}
+
+h3 {
+    color: #6B4A9E;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+main {
+    background-color: #F1E6FF;
+}
+
+/* Section projet */
+
+#le-projet {
+    background-color: #7964F22E;
+}
+
+
+#le-projet > h1 {
+    color: #7964F2;
+}
+
+#le-projet > .section-projet > p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 3rem;
+    font-weight: 100;
+    color: #6B4A9E;
+}
+
+#le-projet > .question {
+    font-family: 'Ubuntu', sans-serif;
+    color: #B892E7;
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Section équipe */
+
+#equipe > .equipe-grille > .membre-equipe > p {
+    font-size: 1.5rem;
+    color: #6B4A9E;
+    text-align: justify;
+}
+
+.membre-equipe {
+    text-align: center;
+}
+
+/* Formulaire */
+
+.section-1 > p {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 100;
+    font-size: 4rem;
+    color: #6B4A9E;
+}
+
+.section-2 > form {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 3em;
+    font-size: large;
+    background-color: white;
+    opacity: 60%;
+    border-radius: 12px;
+}
+
+.section-2 > form > .button > button {
+    background-color: #7964F2;
+    border: none;
+    border-radius: 12px;
+    padding: 0.4em;
+    color: white;
+    text-transform: capitalize;
+    width: 6.3em;
+    cursor: pointer;
+}
+
+.section-2 > form > .button > button:hover {
+    transition: background-color 0.3s ease;
+    background-color: #6B4A9E;
+}
+
+/* Footer */
+
+footer {
+    background-color: #F1E6FF;
+    color: #7964F2;
+    padding: 1em;
+    font-size: 1.5rem;
+    justify-content: center;
+}
+
+.reseaux {
+    font-size: 3rem;
+}

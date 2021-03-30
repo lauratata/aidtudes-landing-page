@@ -1,0 +1,47 @@
+header > img {
+    width: 14rem;
+    margin-left: 2vw;
+}
+
+.bouton-descendre, .bouton-remonter {
+    width: 8em;
+    color: #7964F2;
+    z-index: 2;
+    transform: translateX(0);
+}
+
+.bouton-descendre:hover, .bouton-remonter:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.bouton-remonter {
+    margin: auto;
+}
+
+.bouton {
+    background-color: #B892E7;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1em;
+    width: 13rem;
+    margin: auto;
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.bouton:hover {
+    background-color: #6B4A9E;
+    transition: background-color 0.3s ease;
+}
+
+
+#equipe > .equipe-grille > .membre-equipe > img {
+    border-radius: 100%;
+}
+
+
+
