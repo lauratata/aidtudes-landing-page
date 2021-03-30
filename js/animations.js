@@ -1,3 +1,5 @@
+// Boutons redescendre et remonter
+
 function ScrollVersLeBas() {
     let SectionProjet = document.querySelector("#le-projet");
     SectionProjet.scrollIntoView({behavior: 'smooth'});
