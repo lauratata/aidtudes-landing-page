@@ -1,3 +1,29 @@
+<?php
+
+if (isset($_POST['email']) && $email = $_POST['email'] != '') {
+
+    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $name = $_POST['name'];
+        $firstname = $_POST['firstname'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+
+        $to = "laura.taormina@gmail.com";
+        $body = "";
+
+        $body .= "De :" . $firstname . $name . "\r\n";
+        $body .= "Email : " . $email . "\r\n";
+        $body .= "Message : " . $message . "\r\n";
+
+        mail($to, $message, $body);
+
+        $message_sent = true;
+        $msg = "Votre message a bien été envoyé !";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,13 +38,13 @@
 <body>
 
 <header>
-    <img src="img/logo.svg" alt="Logo">
+    <img src="img/logo-txt.svg" alt="Logo">
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="index.html#le-projet">Le projet</a></li>
             <li><a href="index.html#equipe">Notre équipe </a></li>
-            <li><a href="formulaire.html">Nous contacter</a></li>
+            <li><a href="formulaire.php">Nous contacter</a></li>
         </ul>
     </nav>
 </header>
@@ -36,40 +62,47 @@
 
             <div>
                 <label for="name"></label>
-                <input type="text" id="name" placeholder="ton nom" name="user_name">
+                <input type="text" id="name" placeholder="ton nom" name="name">
             </div>
 
             <div>
                 <label for="first-name"></label>
-                <input type="text" id="first-name" placeholder="ton prénom" name="user_name">
+                <label>
+                    <input type="text" id="firstname" placeholder="ton prénom" name="firstname" style="width:100%">
+                </label>
             </div>
 
             <div>
-                <label for="mail"></label>
-                <input type="email" id="mail" placeholder="ton e-mail" name="user_mail">
+                <label for="mail">
+                    <input type="email" id="mail" placeholder="ton e-mail" name="email">
+                </label>
             </div>
 
             <div>
                 <label for="msg"></label>
-                <textarea id="msg" placeholder="tes remarques" name="user_message"></textarea>
+                <textarea id="msg" placeholder="tes remarques" name="message"></textarea>
             </div>
 
             <div class="button">
-                <button type="submit">Envoyer</button>
+                <input type="submit" value="Envoyer" name="contactform">
             </div>
         </form>
 
-    </div>
+        <?php
+        if (isset($msg)) {
+            echo "<h2>" . $msg . "</h2>";
+        }
+        ?>
 
-    <form action=""></form>
+    </div>
 
 </main>
 
 <footer>
     <div class="footer-txt">
         <p><a href="#">Mentions légales</a> - aidTudes</p>
-        <p>Projet réalisé dans un cadre pédagogique au <a href="http://mmimontbeliard.com/">département MMI de l’IUT de
-            Montbéliard</a></p>
+        <p>Projet réalisé dans un cadre pédagogique au <a href="https://mmimontbeliard.com/">département MMI de l’IUT de
+                Montbéliard</a></p>
     </div>
 
     <div class="reseaux">

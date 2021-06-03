@@ -1,5 +1,5 @@
 header > img {
-    width: 14rem;
+    width: 7%;
     margin-left: 2vw;
 }
 
@@ -20,6 +20,17 @@ header > img {
     margin: auto;
 }
 
+input[type=submit] {
+    background-color: #7964F2;
+    border: none;
+    border-radius: 12px;
+    padding: 0.4em;
+    color: white;
+    text-transform: capitalize;
+    width: 6.3em;
+    cursor: pointer;
+}
+
 .bouton {
     background-color: #B892E7;
     cursor: pointer;
@@ -31,6 +42,11 @@ header > img {
     color: white;
     text-align: center;
     border-radius: 12px;
+}
+
+input[type=submit]:hover {
+    background-color: #6B4A9E;
+    transition: background-color 0.3s ease;
 }
 
 .bouton:hover {
